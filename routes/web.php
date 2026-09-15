@@ -1,5 +1,10 @@
 <?php
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\DashboardController;
+
+Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->middleware('auth')
+    ->name('dashboard');
  
 Route::get('/login', [LoginController::class, 'create'])
     ->middleware('guest')
