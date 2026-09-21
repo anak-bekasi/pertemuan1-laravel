@@ -30,4 +30,12 @@ Route::middleware(['auth', 'role:admin,kasir'])->group(function () {
     Route::post('/pos', [PosController::class, 'store'])->name('pos.store');
 });
 
+Route::get('/pos/history', function () {
+    //
+})->name('pos.history');
+
+Route::get('/badgeview', function () {
+    return view('badgeview');
+})->name('badgesview');
+
 
