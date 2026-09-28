@@ -1,6 +1,9 @@
 <?php
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReportController;
 
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware('auth')
@@ -37,5 +40,8 @@ Route::get('/pos/history', function () {
 Route::get('/badgeview', function () {
     return view('badgeview');
 })->name('badgesview');
+
+Route::resource('categories', CategoryController::class);
+Route::resource('products', ProductController::class);
 
 
