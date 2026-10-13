@@ -12,5 +12,18 @@
             </x-card>
         </div>
     </div>
+
+    <div class="flex gap-4">
+
+        <p> Gula pasir: </p>
+        <x-badge status="Aman" />
+
+        <p> Gula jawa: </p>
+        <x-badge status="Menipis" />
+
+        <p> Gula madura: </p>
+        <x-badge status="Habis" />
+
+    </div>
 </x-app-layout>
 
